@@ -1,0 +1,43 @@
+.parent {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 15vh;
+}
+
+.input {
+    outline: none;
+    height: 5vh;
+    width: 25vw;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 25px;
+    transition: 400ms;
+}
+
+.input_clicked {  
+    margin-top: 15vh;  
+    z-index: 10;
+    height: 6vh;
+    width: 40vw;
+    transition: 500ms;
+    background-color: #ceccc8;
+    color: black;
+    font-size: 80%;
+}
+
+/* .input::placeholder {
+    text-align: center;
+} */
+
+.searchText{
+    position: fixed;
+    width: 100vw;
+    text-align: center;
+    top: 0;
+    left: 0;
+    margin: 0;
+    margin-top: 12vh ;
+    z-index: 10;
+}

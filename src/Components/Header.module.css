@@ -35,7 +35,7 @@
 }
 
 .rpi{
-    background-image: linear-gradient(to right, #C51A4A, #6CC04A);
+    background-image: linear-gradient(to right, #fd2361, #acf190);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
