@@ -10,13 +10,13 @@ const BackDrop = ({ onClick }) => {
 	const variantsCtx = useContext(variantsStore);
 
 	return ReactDOM.createPortal(
-			<motion.div
-				variants={variantsCtx.backdrop}
-				initial='initial'
-				animate='animate'
-				exit='exit'
-				className={styles.backdrop}
-				onClick={onClick}></motion.div>,
+		<motion.div
+			variants={variantsCtx.backdrop}
+			initial='initial'
+			animate='animate'
+			exit='exit'
+			className={styles.backdrop}
+			onClick={onClick}></motion.div>,
 		document.getElementById("backdrop")
 	);
 };

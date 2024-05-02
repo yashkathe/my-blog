@@ -1,0 +1,31 @@
+.parent{
+    background-color: #b6aecc;
+    height: auto;
+    width: 25vw;
+    border-radius: 25px;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    margin: 5vh 2vw;
+}
+
+.parent:hover{
+    cursor: pointer;
+}
+
+.parent > h2{
+    font-size: 2rem;
+    color: #000000;
+}
+
+.parent > p{
+    font-size: 1rem;
+    color: #000000;
+}
+
+.parent > ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+}

@@ -1,0 +1,8 @@
+.parent {
+	margin: 5rem 3rem;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+    flex-wrap: wrap;
+}

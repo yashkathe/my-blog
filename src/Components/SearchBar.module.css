@@ -8,12 +8,15 @@
 
 .input {
     outline: none;
-    height: 5vh;
-    width: 25vw;
+    height: 6vh;
+    width: 30vw;
     padding: 1rem;
     box-sizing: border-box;
     border-radius: 25px;
     transition: 400ms;
+    background: #e7e5e2 ;
+    color: black;
+    font-size: 0.8rem;
 }
 
 .input_clicked {  

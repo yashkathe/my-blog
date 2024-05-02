@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
 
-const BlogPreview = () => {
-  return (
-    <div>BlogPreview</div>
-  )
-}
+import Tag from "./Tags/Tag";
 
-export default BlogPreview
+import styles from "./BlogPreview.module.css";
+
+const BlogPreview = ({ title, description, tags }) => {
+	return (
+		<div className={styles.parent}>
+			<h2>{title}</h2>
+			<p>{description}</p>
+			<ul>
+				{tags.map((tag) => (
+					<Tag key={tag} tagname={tag} />
+				))}
+			</ul>
+		</div>
+	);
+};
+
+export default BlogPreview;

@@ -1,0 +1,6 @@
+.tag{
+    box-sizing: border-box;
+    padding: 2px 8px;
+    margin: 5px 10px;
+    border-radius: 5px;
+}

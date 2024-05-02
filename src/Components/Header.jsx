@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className={styles.parent}>
         <section>
-            <p>Yash's Blog</p>
+            <h1>Yash's Blog</h1>
         </section>
         <section>
             <p>Powered by <span className={styles.rpi}>Raspberry Pi 5</span></p>

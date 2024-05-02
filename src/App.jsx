@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import SearchBar from "./Components/SearchBar";
 
 import styles from "./App.module.css"
+import Blogs from "./Components/Blogs";
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
             <Header/>
             <div className={styles.components}>
                 <SearchBar/>
-                <BlogPreview/>
+                <Blogs/>
             </div>
         </div>
   )
