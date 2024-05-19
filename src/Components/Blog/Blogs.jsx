@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import BlogPreview from "./BlogPreview";
 
-import { SearchContext } from "../Context/SearchContext";
+import { SearchContext } from "../../Context/SearchContext";
 
 import styles from "./Blogs.module.css";
 

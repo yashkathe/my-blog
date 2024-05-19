@@ -1,6 +1,6 @@
-import Header from "./Components/Header";
-import SearchBar from "./Components/SearchBar";
-import Blogs from "./Components/Blogs";
+import Header from "./Components/UI/Header";
+import SearchBar from "./Components/UI/SearchBar";
+import Blogs from "./Components/Blog/Blogs";
 
 import SearchProvider from "./Context/SearchProvider";
 

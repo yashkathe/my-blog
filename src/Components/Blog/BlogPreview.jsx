@@ -1,7 +1,7 @@
 import React from "react";
 import { Tilt } from "react-tilt";
 
-import Tag from "./Tags/Tag";
+import Tag from "../Tags/Tag";
 
 import styles from "./BlogPreview.module.css";
 
