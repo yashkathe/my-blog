@@ -1,21 +1,23 @@
-import BlogPreview from "./Components/BlogPreview";
 import Header from "./Components/Header";
 import SearchBar from "./Components/SearchBar";
-
-import styles from "./App.module.css"
 import Blogs from "./Components/Blogs";
 
-function App() {
+import SearchProvider from "./Context/SearchProvider";
 
-  return (
-        <div>
-            <Header/>
-            <div className={styles.components}>
-                <SearchBar/>
-                <Blogs/>
-            </div>
-        </div>
-  )
+import styles from "./App.module.css";
+
+function App() {
+	return (
+		<SearchProvider>
+			<div>
+				<Header />
+				<div className={styles.components}>
+					<SearchBar />
+					<Blogs />
+				</div>
+			</div>
+		</SearchProvider>
+	);
 }
 
-export default App
+export default App;

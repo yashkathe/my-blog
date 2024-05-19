@@ -2,12 +2,15 @@ import React, { useState, useContext } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import BackDrop from "./UI/BackDrop";
+
 import variantsStore from "../Context/Variants";
+import { SearchContext } from "../Context/SearchContext";
 
 import styles from "./SearchBar.module.css";
 
 const SearchBar = () => {
 	const variantsCtx = useContext(variantsStore);
+    const {searchTerm, setSearchTerm} = useContext(SearchContext)
 
 	const [showBackdrop, setShowBackdrop] = useState(false);
 	const [additionalClass, setAdditionalClass] = useState("");
@@ -44,6 +47,7 @@ const SearchBar = () => {
 				className={`${styles.input} ${additionalClass}`}
 				onClick={onClickInputHandler}
 				placeholder={showBackdrop ? "" : "Search for a Blog"}
+                onChange={(e) => setSearchTerm(e.target.value)}
 			/>
 		</div>
 	);

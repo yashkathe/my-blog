@@ -1,4 +1,4 @@
-.parent{
+.parent {
     background-color: #b6aecc;
     height: auto;
     width: 25vw;
@@ -6,24 +6,24 @@
     padding: 5px 15px;
     box-sizing: border-box;
     margin: 5vh 2vw;
-    box-shadow: 0px 0px 10px 1px rgb(255, 255, 255);
+    box-shadow: 0px px 10px 1px rgb(255, 255, 255);
 }
 
-.parent:hover{
+.parent:hover {
     cursor: pointer;
 }
 
-.parent > h2{
+.parent>h2 {
     font-size: 2rem;
     color: #000000;
 }
 
-.parent > p{
+.parent>p {
     font-size: 1rem;
     color: #000000;
 }
 
-.parent > ul{
+.parent>ul {
     display: flex;
     flex-direction: row;
     align-items: center;
