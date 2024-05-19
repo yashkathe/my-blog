@@ -1,12 +1,16 @@
 .parent {
     background-color: #b6aecc;
-    height: auto;
+    min-height: 18rem;
+    max-height: auto;
     width: 25vw;
     border-radius: 25px;
     padding: 5px 15px;
     box-sizing: border-box;
     margin: 5vh 2vw;
     box-shadow: 0px px 10px 1px rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .parent:hover {

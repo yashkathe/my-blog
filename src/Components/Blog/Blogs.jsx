@@ -48,8 +48,9 @@ const Blogs = () => {
 					tags={blog.tags}
 				/>
 			))}
-            {previewBlogs.length === 0 && <p>No results found for: {searchTerm}</p>}
-		</div>
+            {previewBlogs.length === 0 && searchTerm.length > 0 && <p>No results found for: {searchTerm}</p>}
+            {previewBlogs.length === 0 && searchTerm.length === 0 && <p>No Blogs Uploaded Yet</p>}        
+        </div>
 	);
 };
 
