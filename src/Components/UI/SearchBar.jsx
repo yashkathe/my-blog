@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import BackDrop from "./BackDrop";
@@ -15,6 +15,8 @@ const SearchBar = () => {
 	const [showBackdrop, setShowBackdrop] = useState(false);
 	const [additionalClass, setAdditionalClass] = useState("");
 
+	const searchBar = useRef(null);
+
 	const onClickInputHandler = () => {
 		setShowBackdrop(true);
 		setAdditionalClass(`${styles.input_clicked}`);
@@ -25,21 +27,34 @@ const SearchBar = () => {
 		setAdditionalClass(``);
 	};
 
-	// on pressing escape exit the backdrop
+	// handle keyboard clicks
 
 	useEffect(() => {
 		const handleEsc = (event) => {
-			if (event.key === "Escape" || event.key === "Enter") {
+			if (event.key === "Escape") {
 				setShowBackdrop(false);
 				setAdditionalClass(``);
+
+			}
+		};
+
+		const searchFocus = (event) => {
+			if (event.key === "/") {
+				event.preventDefault();
+				searchBar.current.focus();
+				setShowBackdrop(true);
+				setAdditionalClass(`${styles.input_clicked}`);
 			}
 		};
 
 		window.addEventListener("keydown", handleEsc);
+        window.addEventListener("keydown", searchFocus)
 
 		return () => {
 			window.removeEventListener("keydown", handleEsc);
-		};
+            window.removeEventListener("keydown", searchFocus)
+        };
+        
 	}, []);
 
 	return (
@@ -61,9 +76,10 @@ const SearchBar = () => {
 			</AnimatePresence>
 
 			<input
+				ref={searchBar}
 				className={`${styles.input} ${additionalClass}`}
 				onClick={onClickInputHandler}
-				placeholder={showBackdrop ? "" : "Search for a Blog"}
+				placeholder={showBackdrop ? "" : "Search for a Blog '/'"}
 				onChange={(e) => setSearchTerm(e.target.value)}
 			/>
 		</div>

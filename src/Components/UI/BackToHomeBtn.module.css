@@ -1,0 +1,45 @@
+.parent{
+    width: fit-content;
+}
+
+.parent_filled{
+    width: fit-content;
+}
+
+.parent_filled a {
+    border: 1px solid #121212;
+    color: #121212;
+    border-radius: 0px 20px 0 20px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    transition: 800ms;
+    background: #e8e6e3;
+}
+
+.parent a{
+    border: 1px solid #e8e6e3;
+    color: #e8e6e3;
+    border-radius: 15px 15px 15px 15px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    transition: 500ms;
+}
+
+.parent_filled a:hover{
+    border: 1px solid #e8e6e3;
+    color:#121212;
+    border-radius: 15px 15px 15px 15px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    transition: 500ms;
+}
+
+.parent a:hover{
+    border: 1px solid #121212;
+    color: #121212;
+    border-radius: 0px 20px 0 20px;
+    box-sizing: border-box;
+    background: #e8e6e3;
+    transition: 800ms;
+}
+

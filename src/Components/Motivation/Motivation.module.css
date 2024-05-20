@@ -1,0 +1,35 @@
+.parent {
+    height: 50vh;
+    width: 100vw;
+    padding: 5rem 15rem;
+    box-sizing: border-box;
+}
+
+.parent a {
+    margin-top: 15rem;
+}
+
+.tech_stack {
+    margin-top: 5rem;
+}
+
+.tech_stack ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tech_stack li {   
+    padding-right: 2rem;
+}
+
+.link {
+    margin-top: 5rem;
+}
+
+.tech_stack img{
+    width: 10rem;
+}
