@@ -42,6 +42,10 @@ const variantsStore = {
                 duration: 0.5
             }
         }
+    },
+
+    scale: {
+        scale: 1.1
     }
 };
 

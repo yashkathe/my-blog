@@ -1,9 +1,16 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
+
+import { motion } from "framer-motion";
+
+import variantStore from '../../Context/Variants.js'
 
 import styles from "./Header.module.css";
 
 const Header = () => {
+
+    const variants = useContext(variantStore)
+
 	return (
 		<div className={styles.parent}>
 			<section>
@@ -11,9 +18,9 @@ const Header = () => {
 			</section>
 			<section className={styles.motivation}>
 				<Link to="/motivation">
-					<p>
+					<motion.p whileHover={variants.scale}>
 						Powered by <span className={styles.rpi}>Raspberry Pi 5</span>
-					</p>
+					</motion.p>
 				</Link>
 			</section>
 		</div>

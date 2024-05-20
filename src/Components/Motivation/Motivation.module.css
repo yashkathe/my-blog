@@ -1,6 +1,6 @@
 .parent {
-    height: 50vh;
-    width: 100vw;
+    height: auto;
+    width: 100%;
     padding: 5rem 15rem;
     box-sizing: border-box;
 }
@@ -13,7 +13,7 @@
     margin-top: 5rem;
 }
 
-.tech_stack ul {
+.parent ul {
     list-style: none;
     padding: 0;
     display: flex;
@@ -22,7 +22,7 @@
     align-items: center;
 }
 
-.tech_stack li {   
+.parent li {   
     padding-right: 2rem;
 }
 
@@ -32,4 +32,10 @@
 
 .tech_stack img{
     width: 10rem;
+    border-radius: 10px;
+}
+
+.other_links a {
+    color: #e8e6e3;
+    text-decoration: underline;
 }
