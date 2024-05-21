@@ -4,6 +4,7 @@ import { Tilt } from "react-tilt";
 import Tag from "../Tags/Tag";
 
 import styles from "./BlogPreview.module.css";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const defaultOptions = {
 	reverse: false, // reverse the tilt direction
@@ -17,18 +18,20 @@ const defaultOptions = {
 	easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
 };
 
-const BlogPreview = ({ title, description, tags }) => {
+const BlogPreview = ({ title, description, tags, to }) => {
 	return (
 		<Tilt options={defaultOptions}>
-			<div className={styles.parent}>
-				<h2>{title}</h2>
-				<p>{description}</p>
-				<ul>
-					{tags.map((tag) => (
-						<Tag key={tag} tagname={tag} />
-					))}
-				</ul>
-			</div>
+			<Link to={to}>
+				<div className={styles.parent}>
+					<h2>{title}</h2>
+					<p>{description}</p>
+					<ul>
+						{tags.split(",").map((tag) => (
+							<Tag key={tag} tagname={tag} />
+						))}
+					</ul>
+				</div>
+			</Link>
 		</Tilt>
 	);
 };
