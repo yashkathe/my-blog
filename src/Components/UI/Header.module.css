@@ -34,6 +34,10 @@
     margin: 0;
 }
 
+.parent > section:nth-child(2) p{
+    font-size: 1.2rem;
+}
+
 .rpi{
     background-image: linear-gradient(to right, #fd2361, #acf190);
     -webkit-background-clip: text;

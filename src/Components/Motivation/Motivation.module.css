@@ -1,7 +1,7 @@
 .parent {
     height: auto;
     width: 100%;
-    padding: 5rem 15rem;
+    padding: 4rem 10rem;
     box-sizing: border-box;
 }
 
@@ -9,8 +9,18 @@
     margin-top: 15rem;
 }
 
+.parent h1 {
+    margin-bottom: 0.5rem;
+}
+
 .tech_stack {
     margin-top: 5rem;
+}
+
+.underline {
+    width: 100%;
+    border: 1px solid rgba(232, 230, 227, 0.8);
+    margin-bottom: 2rem;
 }
 
 .parent ul {
@@ -20,17 +30,15 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    width: fit-content;
+    height: auto;
 }
 
-.parent li {   
+.parent li {
     padding-right: 2rem;
 }
 
-.link {
-    margin-top: 5rem;
-}
-
-.tech_stack img{
+.tech_stack img {
     width: 10rem;
     border-radius: 10px;
 }
@@ -38,4 +46,19 @@
 .other_links a {
     color: #e8e6e3;
     text-decoration: underline;
+    text-align: center;
+}
+
+.rpi {
+    background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 4rem !important;
+}
+
+.link {
+    margin-top: 5rem;
 }

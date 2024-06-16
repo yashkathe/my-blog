@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, {useContext} from "react";
+import { motion } from "framer-motion";
 
 import BackToHomeBtn from "../UI/BackToHomeBtn";
 
@@ -9,12 +9,21 @@ import sqlite_logo from "/logos/sqllite.png";
 
 import styles from "./Motivation.module.css";
 
+import variantsCtx from "../../Context/Variants";
+
 const Motivation = () => {
-	return (
+	
+    const variants = useContext(variantsCtx)
+
+    return (
 		<div className={styles.parent}>
+			<h1 className={styles.rpi}>
+				Powered by passion: Hosted on my personal Raspberry Pi
+			</h1>
+
 			<div>
 				<h1>Motivation</h1>
-				<p></p>
+                <div className={styles.underline}></div>
 				<p>
 					Inspired by the Feynman Technique, I started this blog to simplify
 					complex concepts and explain them in easy-to-understand language. This
@@ -25,6 +34,8 @@ const Motivation = () => {
 
 			<div className={styles.tech_stack}>
 				<h1>Tech Stack</h1>
+                <div className={styles.underline}></div>
+                
 				<ul>
 					<li>
 						<img src={react_logo} alt='REACT' />
@@ -40,12 +51,20 @@ const Motivation = () => {
 
 			<div className={styles.other_links}>
 				<h1>Other Links</h1>
+                <div className={styles.underline}></div>
+
 				<ul>
-					<li>
-						<a target='__blank__' href='https://yashkathe.github.io/'>
-							My Portfolio Website
+                
+					<motion.li whileHover={variants.scale}>
+						<a  target='__blank__' href='https://yashkathe.github.io/'>
+                        → My Portfolio Website
 						</a>
-					</li>
+					</motion.li>
+                    <motion.li whileHover={variants.scale}>
+						<a  target='__blank__' href='https://github.com/yashkathe'>
+                        → My Github Profile
+						</a>
+					</motion.li>
 				</ul>
 			</div>
 

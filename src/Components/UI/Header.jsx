@@ -14,7 +14,7 @@ const Header = () => {
 	return (
 		<div className={styles.parent}>
 			<section>
-				<h1>Yash's Blog</h1>
+				<h1>&lt;Yash's Blog&gt;</h1>
 			</section>
 			<section className={styles.motivation}>
 				<Link to="/motivation">
