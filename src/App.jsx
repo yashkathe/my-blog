@@ -1,9 +1,10 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from "./Components/UI/Header";
 import SearchBar from "./Components/UI/SearchBar";
 import Blogs from "./Components/Blog/Blogs";
 import Motivation from "./Components/Motivation/Motivation";
+import CreateBlog from "./Components/Blog/Create-Blog/CreateBlog";
 import Error from "./error/Error";
 
 import SearchProvider from "./Context/SearchProvider";
@@ -13,12 +14,12 @@ import styles from "./App.module.css";
 function App() {
 	return (
 		<Router>
-			<Switch>
-				<Route path="/motivation" exact>
-                    <Motivation/>
-                </Route>
-                <Route path='/' exact>
-					<SearchProvider>
+			<SearchProvider>
+				<Switch>
+					<Route path='/motivation' exact>
+						<Motivation />
+					</Route>
+					<Route path='/' exact>
 						<div>
 							<Header />
 							<div className={styles.components}>
@@ -26,12 +27,20 @@ function App() {
 								<Blogs />
 							</div>
 						</div>
-					</SearchProvider>
-				</Route>
-                <Route>
-                    <Error/>
-                </Route>
-			</Switch>
+					</Route>
+					<Route path='/create-blog' exact>
+						<div>
+							<Header />
+							<div className={styles.components}>
+								<CreateBlog />
+							</div>
+						</div>
+					</Route>
+					<Route>
+						<Error />
+					</Route>
+				</Switch>
+			</SearchProvider>
 		</Router>
 	);
 }

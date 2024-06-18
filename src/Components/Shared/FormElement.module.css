@@ -1,0 +1,37 @@
+.formElement {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6.5rem;
+}
+
+.formElement>* {
+    margin: 1rem;
+}
+
+.formElement>label {
+    font-size: 2rem;
+    margin-left: 0;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+}
+
+/* Remove default styles of input tag */
+.formElement>input {
+    all: unset;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    color: inherit;
+    outline: none;
+    font-family: inherit;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+}
+
+.formElement>input {
+    border-bottom: 1px solid #e3e3e3;
+}

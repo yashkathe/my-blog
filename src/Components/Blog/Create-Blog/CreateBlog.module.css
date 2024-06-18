@@ -1,0 +1,20 @@
+.form{
+    margin: 8rem 15rem 0rem 15rem;
+}
+
+.form button{
+    background-color: #e8e6e3 !important;
+    color: #121212;
+    margin-top: 4rem;
+}
+
+.submit{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.submit > button:nth-child(2){
+    font-weight: bold;
+}
