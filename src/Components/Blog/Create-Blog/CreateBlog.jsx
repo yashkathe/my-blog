@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import Markdown from "react-markdown";
+
 import FormElement from "../../Shared/FormElement";
+
 import styles from "./CreateBlog.module.css";
+import WriteMarkdown from "./WriteMarkdown";
 
 const CreateBlog = () => {
 	const [pageNum, setPageNum] = useState(1);
@@ -59,7 +63,7 @@ const CreateBlog = () => {
 			)}
 			{pageNum === 2 && (
 				<div>
-					<FormElement
+					<WriteMarkdown
 						title='Start Writing Your Blog'
 						name='blog'
 						value={formData.blog}

@@ -1,5 +1,5 @@
 .form{
-    margin: 8rem 15rem 0rem 15rem;
+    margin: 0rem 15rem 8rem 15rem;
 }
 
 .form button{
@@ -17,4 +17,8 @@
 
 .submit > button:nth-child(2){
     font-weight: bold;
+}
+
+.submit button{
+    margin-top: 2rem;
 }
