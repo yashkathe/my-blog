@@ -1,0 +1,12 @@
+.btn > img{
+    max-height: 100%;
+    max-width: fit-content;
+}
+
+.btn{
+    height: 2rem;
+    padding: 0;
+    margin: 1rem 0.5rem !important;
+    padding: 5px;
+    box-sizing: border-box;
+}

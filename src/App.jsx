@@ -17,7 +17,10 @@ function App() {
 			<SearchProvider>
 				<Switch>
 					<Route path='/motivation' exact>
-						<Motivation />
+						<Header />
+						<div className={styles.components}>
+							<Motivation />
+						</div>
 					</Route>
 					<Route path='/' exact>
 						<div>

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Markdown from "react-markdown";
 
 import FormElement from "../../Shared/FormElement";
 

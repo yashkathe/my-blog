@@ -27,8 +27,6 @@ const Blogs = () => {
 			setPreviewBlogs(response.data.data);
 			setIsLoading(false);
 		} catch (err) {
-            console.log(err)
-			console.log(err);
 			setError(err);
 			setIsLoading(false);
 		}
@@ -73,7 +71,7 @@ const Blogs = () => {
 				{/* something went wrong */}
 				{hasError && !isLoading && (
 					<ErrorComponent
-						name={hasError.name || "Error"}
+						name={`${hasError.name} ⚠️` || "Error ⚠️"}
 						message={hasError.message || "Something Went Wrong"}
 					/>
 				)}
