@@ -5,6 +5,7 @@ import SearchBar from "./Components/UI/SearchBar";
 import Blogs from "./Components/Blog/Blogs";
 import Motivation from "./Components/Motivation/Motivation";
 import CreateBlog from "./Components/Blog/Create-Blog/CreateBlog";
+import RenderBlog from "./Components/Blog/Display-Blog/RenderBlog";
 import Error from "./error/Error";
 
 import SearchProvider from "./Context/SearchProvider";
@@ -39,6 +40,14 @@ function App() {
 							</div>
 						</div>
 					</Route>
+                    <Route path='/blog/:id'>
+                        <div>
+                            <Header/>
+                            <div className={styles.components}>
+								<RenderBlog />
+							</div>
+                        </div>
+                    </Route>
 					<Route>
 						<Error />
 					</Route>

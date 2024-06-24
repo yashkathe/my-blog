@@ -16,7 +16,7 @@ const Editor = forwardRef((props, ref) => {
 			const start = textarea.selectionStart;
 			const end = textarea.selectionEnd;
 			const text = textarea.value;
-			const linkTemplate = "[name of the link]()";
+			const linkTemplate = "[]()";
 			const newText = text.slice(0, start) + linkTemplate + text.slice(end);
 			textarea.value = newText;
 			textarea.setSelectionRange(start + 2, start + 2);
@@ -35,7 +35,7 @@ const Editor = forwardRef((props, ref) => {
 			const start = textarea.selectionStart;
 			const end = textarea.selectionEnd;
 			const text = textarea.value;
-			const linkTemplate = "![name of the image]()";
+			const linkTemplate = "![]()";
 			const newText = text.slice(0, start) + linkTemplate + text.slice(end);
 			textarea.value = newText;
 			textarea.setSelectionRange(start + 4, start + 4);

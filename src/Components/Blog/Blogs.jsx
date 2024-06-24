@@ -45,7 +45,7 @@ const Blogs = () => {
 						{previewBlogs.map((blog) => (
 							<BlogPreview
 								key={blog.id}
-                                to={blog.route}
+                                to={`blog/${blog.id}`}
 								title={blog.title}
 								description={blog.description}
 								tags={blog.tags}
