@@ -1,9 +1,9 @@
 .parent {
     background-color: #b6aecc;
     min-height: 12rem;
-    width: 25vw;
+    width: auto;
     border-radius: 25px;
-    padding: 10px;
+    padding: 1.5rem;
     box-sizing: border-box;
     margin: 5vh 2vw;
     display: flex;
@@ -19,13 +19,13 @@
 }
 
 .parent>h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #000000;
     margin: 0;
 }
 
 .parent>p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #000000;
     margin: 0;
 }

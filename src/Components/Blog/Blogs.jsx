@@ -71,42 +71,11 @@ const Blogs = () => {
 				{/* something went wrong */}
 				{hasError && !isLoading && (
 					<ErrorComponent
-						name={`${hasError.name} ⚠️` || "Error ⚠️"}
+						name={`${hasError.name} ` || "Error"}
 						message={hasError.message || "Something Went Wrong"}
 					/>
 				)}
 			</div>
-
-			{/* handle page changes */}
-			{!isLoading && !hasError && (
-				<div className={styles.footer}>
-					{
-						<button
-							onClick={() => {
-								setPageNumber((prevPage) => prevPage - 1);
-							}}
-							className={
-								data.prev_page ? styles.prev_page : styles.prev_page_disabled
-							}
-							disabled={data.prev_page ? false : true}>
-							Prev Page
-						</button>
-					}
-					<p>{data.current_page}</p>
-					{
-						<button
-							onClick={() => {
-								setPageNumber((prevPage) => prevPage + 1);
-							}}
-							className={
-								data.next_page ? styles.next_page : styles.next_page_disabled
-							}
-							disabled={data.next_page ? false : true}>
-							Next Page
-						</button>
-					}
-				</div>
-			)}
 		</>
 	);
 };
