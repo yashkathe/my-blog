@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-import BackDrop from "./BackDrop";
+import BackDrop from "../../Components/UI/BackDrop";
 
 import variantsStore from "../../Context/Variants";
 import { SearchContext } from "../../Context/SearchContext";

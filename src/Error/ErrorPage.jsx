@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 
-import BackToHomeBtn from "../Components/UI/BackToHomeBtn";
+import BackToHomeBtn from "../Components/Shared/BackToHomeBtn";
 
 import styles from "./ErrorPage.module.css";
 

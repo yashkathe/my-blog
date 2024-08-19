@@ -2,7 +2,7 @@ import React, { useContext} from "react";
 
 import BlogPreview from "./Components/BlogPreview";
 import ErrorComponent from "../Error/ErrorComponent";
-import Spinner from "../Components/UI/Spinner";
+import Spinner from "../Components/Shared/Spinner";
 import { SearchContext } from "../Context/SearchContext";
 import useHttpHook from "../Hooks/useHttpHook";
 
@@ -13,7 +13,7 @@ const Blogs = () => {
 
 	const { data, error, isLoading } = useHttpHook("get-blogs/");
 
-	return (
+    return (
 		<>
 			<div className={styles.parent}>
 				{!isLoading && !error && data && (
@@ -22,6 +22,7 @@ const Blogs = () => {
 							<BlogPreview
 								key={blog._id}
 								to={`blog/${blog._id}`}
+                                imageurl={blog.coverImage}
 								title={blog.title}
 								description={blog.description}
 								tags={blog.tags}

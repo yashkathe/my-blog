@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 import useHttpHook from "../Hooks/useHttpHook";
-import Spinner from "../Components/UI/Spinner";
+import Spinner from "../Components/Shared/Spinner";
 
 import classes from "./RenderBlog.module.css";
 

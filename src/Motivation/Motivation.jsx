@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import { motion } from "framer-motion";
 
-import BackToHomeBtn from "../Components/UI/BackToHomeBtn";
+import BackToHomeBtn from "../Components/Shared/BackToHomeBtn";
 
 import mongo_logo from "/logos/mongo_db_logo.png";
 import express_logo from "/logos/express_logo.png"

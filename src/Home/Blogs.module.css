@@ -4,6 +4,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    width: 90vw;
 }
 
 .blogs{
@@ -12,5 +14,4 @@
     align-items: flex-start;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 100%;
 }

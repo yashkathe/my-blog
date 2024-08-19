@@ -1,15 +1,15 @@
 .parent {
     background-color: #b6aecc;
+    overflow: hidden;
     min-height: 12rem;
     width: auto;
-    border-radius: 25px;
-    padding: 1.5rem;
+    border-radius: 30px;
     box-sizing: border-box;
     margin: 5vh 2vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    transition: 500ms;
+    width: 30%;
 }
 
 .parent:hover {
@@ -18,23 +18,40 @@
     transition: 300ms;
 }
 
-.parent>h2 {
-    font-size: 1.8rem;
-    color: #000000;
-    margin: 0;
+.cover_img{
+    display: block;
+    width: 100%;
+    height: 20rem;
 }
 
-.parent>p {
+.cover_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.metadata{
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.metadata > h2 {
+    font-size: 2rem;
+    color: #000000;
+    margin: 0 0 10px 0;
+}
+
+.metadata > p {
     font-size: 1rem;
     color: #000000;
-    margin: 0;
+    margin: 0 0 10px 0;
 }
 
-.parent>ul {
+.metadata > ul {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 0;
     margin: 0;
     flex-wrap: wrap;
