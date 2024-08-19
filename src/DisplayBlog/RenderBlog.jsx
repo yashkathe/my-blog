@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-import useHttpHook from "../../../Hooks/useHttpHook";
-import Spinner from "../../UI/Spinner";
+import useHttpHook from "../Hooks/useHttpHook";
+import Spinner from "../Components/UI/Spinner";
 
 import classes from "./RenderBlog.module.css";
 

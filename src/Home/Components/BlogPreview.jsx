@@ -1,7 +1,7 @@
 import React from "react";
 import { Tilt } from "react-tilt";
 
-import Tag from "../Tags/Tag";
+import Tag from "./Tag";
 
 import styles from "./BlogPreview.module.css";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
@@ -26,7 +26,7 @@ const BlogPreview = ({ title, description, tags, to }) => {
 					<h2>{title}</h2>
 					<p>{description}</p>
 					<ul>
-						{tags.split(",").map((tag) => (
+						{tags.map((tag) => (
 							<Tag key={tag} tagname={tag} />
 						))}
 					</ul>

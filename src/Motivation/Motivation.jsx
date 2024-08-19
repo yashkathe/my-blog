@@ -1,15 +1,16 @@
 import React, {useContext} from "react";
 import { motion } from "framer-motion";
 
-import BackToHomeBtn from "../UI/BackToHomeBtn";
+import BackToHomeBtn from "../Components/UI/BackToHomeBtn";
 
-import react_logo from "/logos/react_logo2.png";
-import django_logo from "/logos/django_logo.png";
-import sqlite_logo from "/logos/sqllite.png";
+import mongo_logo from "/logos/mongo_db_logo.png";
+import express_logo from "/logos/express_logo.png"
+import react_logo from "/logos/react_logo.png";
+import node_logo from "/logos/node_logo.png";
 
 import styles from "./Motivation.module.css";
 
-import variantsCtx from "../../Context/Variants";
+import variantsCtx from "../Context/Variants";
 
 const Motivation = () => {
 	
@@ -25,10 +26,12 @@ const Motivation = () => {
 				<h1>Motivation</h1>
                 <div className={styles.underline}></div>
 				<p>
-					Inspired by the Feynman Technique, I started this blog to simplify
-					complex concepts and explain them in easy-to-understand language. This
-					is a personal project for me to solidify my own understanding and
-					create a resource I can return to whenever I need a refresher.
+					I created this blog because I love to research and I am also a compulsive note taker.
+                    But sometimes the concepts are difficult, so I love to simplify them with losing the complexity 
+                    of the topic/concept. So I am practicing feynman technique.
+                    <br/>
+                    <br/>
+                    'The Feynman technique is all about explaining a concept in simple terms, as if you're teaching it to someone else, to really grasp the idea yourself'
 				</p>
 			</div>
 
@@ -38,13 +41,16 @@ const Motivation = () => {
                 
 				<ul>
 					<li>
+						<img src={mongo_logo} alt='MongoDB' />
+					</li>
+                    <li>
+						<img src={express_logo} alt='Express' />
+					</li>
+                    <li>
 						<img src={react_logo} alt='REACT' />
 					</li>
 					<li>
-						<img src={django_logo} alt='DJANGO' />
-					</li>
-					<li>
-						<img src={sqlite_logo} alt='SQLite' />
+						<img src={node_logo} alt='NodeLogo' />
 					</li>
 				</ul>
 			</div>
@@ -54,7 +60,6 @@ const Motivation = () => {
                 <div className={styles.underline}></div>
 
 				<ul>
-                
 					<motion.li whileHover={variants.scale}>
 						<a  target='__blank__' href='https://yashkathe.github.io/'>
                         → My Portfolio Website

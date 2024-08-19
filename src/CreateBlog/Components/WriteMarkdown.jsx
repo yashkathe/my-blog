@@ -3,7 +3,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 import classes from "./WriteMarkdown.module.css";
-import Editor from "../Editor/Editor";
+import Editor from "./Editor";
 
 const WriteMarkdown = ({ title, inputType, name, value, onChange }) => {
 	const [isMdMode, setIsMdMode] = useState(false);

@@ -2,11 +2,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from "./Components/UI/Header";
 import SearchBar from "./Components/UI/SearchBar";
-import Blogs from "./Components/Blog/Blogs";
-import Motivation from "./Components/Motivation/Motivation";
-import CreateBlog from "./Components/Blog/Create-Blog/CreateBlog";
-import RenderBlog from "./Components/Blog/Display-Blog/RenderBlog";
-import Error from "./error/Error";
+import Blogs from "./Home/Blogs";
+import Motivation from "./Motivation/Motivation";
+import CreateBlog from "./CreateBlog/CreateBlog";
+import RenderBlog from "./DisplayBlog/RenderBlog";
+import Error from "./Error/ErrorPage";
 
 import SearchProvider from "./Context/SearchProvider";
 

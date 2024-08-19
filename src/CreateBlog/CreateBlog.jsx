@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import FormElement from "../../Shared/FormElement";
+import FormElement from "../Components/Shared/FormElement";
 
 import styles from "./CreateBlog.module.css";
-import WriteMarkdown from "./WriteMarkdown";
+import WriteMarkdown from "./Components/WriteMarkdown";
 
 const CreateBlog = () => {
 	const [pageNum, setPageNum] = useState(1);

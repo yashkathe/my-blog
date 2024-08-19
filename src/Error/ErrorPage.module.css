@@ -1,5 +1,5 @@
 .parent{
-    height: 50vh;
+    height: 70vh;
     width: 100%;
     box-sizing: border-box;   
     display: flex;
@@ -10,6 +10,8 @@
 
 .parent span{
     font-style: italic;
+    font-weight: bolder;
+    text-decoration:underline;
 }
 
 .btn{

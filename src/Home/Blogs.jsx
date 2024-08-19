@@ -1,19 +1,17 @@
-import React, { useState, useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
+import React, { useContext} from "react";
 
-import BlogPreview from "./BlogPreview";
-import ErrorComponent from "../../error/ErrorComponent";
-import Spinner from "../UI/Spinner";
-import { SearchContext } from "../../Context/SearchContext";
-import useHttpHook from "../../Hooks/useHttpHook";
+import BlogPreview from "./Components/BlogPreview";
+import ErrorComponent from "../Error/ErrorComponent";
+import Spinner from "../Components/UI/Spinner";
+import { SearchContext } from "../Context/SearchContext";
+import useHttpHook from "../Hooks/useHttpHook";
 
 import styles from "./Blogs.module.css";
 
 const Blogs = () => {
 	const { searchTerm } = useContext(SearchContext);
 
-	const { data, error, isLoading } = useHttpHook("get-blog/");
+	const { data, error, isLoading } = useHttpHook("get-blogs/");
 
 	return (
 		<>
@@ -22,8 +20,8 @@ const Blogs = () => {
 					<div className={styles.blogs}>
 						{data.map((blog) => (
 							<BlogPreview
-								key={blog.id}
-								to={`blog/${blog.id}`}
+								key={blog._id}
+								to={`blog/${blog._id}`}
 								title={blog.title}
 								description={blog.description}
 								tags={blog.tags}
@@ -50,8 +48,8 @@ const Blogs = () => {
 				{/* something went wrong */}
 				{!isLoading && error && (
 					<ErrorComponent
-						name={`${error.name} ` || "Error"}
-						message={error.message || "Something Went Wrong"}
+						name={error.name}
+						message={error.message}
 					/>
 				)}
 			</div>
