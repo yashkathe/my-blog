@@ -20,6 +20,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
+      url: https://yashkathe.github.io/my-blog
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
