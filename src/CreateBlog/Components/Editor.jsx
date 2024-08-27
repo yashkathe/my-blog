@@ -1,6 +1,7 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useEffect, useRef } from "react";
 
 import EditorBtn from "./EditorBtn";
+import useHttpHook from "../../Hooks/useHttpHook";
 
 import styles from "./Editor.module.css";
 
@@ -10,49 +11,42 @@ import upload from "/editor/upload.png";
 
 const Editor = forwardRef((props, ref) => {
 	
-    const insertLink = () => {
-		if (ref && ref.current) {
-			const textarea = ref.current;
-			const start = textarea.selectionStart;
-			const end = textarea.selectionEnd;
-			const text = textarea.value;
-			const linkTemplate = "[]()";
-			const newText = text.slice(0, start) + linkTemplate + text.slice(end);
-			textarea.value = newText;
-			textarea.setSelectionRange(start + 2, start + 2);
-			textarea.focus();
+    const inputRef = useRef()
 
-			// Trigger onChange if necessary
-			if (props.onChange) {
-				props.onChange({ target: { name: textarea.name, value: newText } });
-			}
-		}
-	};
+    const handleInputClick = () => {
 
-    const insertImage = () => {
-		if (ref && ref.current) {
-			const textarea = ref.current;
-			const start = textarea.selectionStart;
-			const end = textarea.selectionEnd;
-			const text = textarea.value;
-			const linkTemplate = "![]()";
-			const newText = text.slice(0, start) + linkTemplate + text.slice(end);
-			textarea.value = newText;
-			textarea.setSelectionRange(start + 4, start + 4);
-			textarea.focus();
+        if(inputRef.current){
+            inputRef.current.click()
+        }
 
-			// Trigger onChange if necessary
-			if (props.onChange) {
-				props.onChange({ target: { name: textarea.name, value: newText } });
-			}
-		}
-	};
+    }
+
+    const handleImageUpload = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const formData = new FormData();
+            formData.append("file", file);
+
+            const { data, error, isLoading } = useHttpHook("upload-image", "POST", formData, {
+                headers: { "Content-Type": "multipart/form-data" }
+            });
+            
+            if (data) {
+                console.log("Upload response:", data);
+            }
+
+            if (error) {
+                console.error("Upload error:", error);
+            }
+        }
+    };
 
 	return (
 		<div className={styles.parent}>
-			<EditorBtn src={link} onClick={insertLink} />
-			<EditorBtn src={image} onClick={insertImage}/>
-			<EditorBtn src={upload} />
+			<EditorBtn src={link} />
+			<EditorBtn src={image}/>
+			<EditorBtn src={upload} onClick={handleInputClick}/>
+            <input type="file" ref={inputRef} onChange={handleImageUpload} hidden/>
 		</div>
 	);
 });

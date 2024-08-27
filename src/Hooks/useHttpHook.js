@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const useHttpHook = (link) => {
+const useHttpHook = (link, method = "GET", body = null, headers = {}) => {
 
     const [ data, setData ] = useState(null);
     const [ error, setError ] = useState(null);
@@ -15,7 +15,13 @@ const useHttpHook = (link) => {
         const fetchData = async () => {
             setIsLoading(true);
             try {
-                const response = await axios.get(`${backendProd}/${link}`);
+                let response;
+                if(method === "GET") {
+                    response = await axios.get(`${backendProd}/${link}`);
+                }
+                else if(method === "POST") {
+                    response = await axios.post(`${backendProd}/${link}`, body, headers);
+                }
                 setData(response.data.data);
             } catch(err) {
                 console.log(err);
