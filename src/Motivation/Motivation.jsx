@@ -19,7 +19,7 @@ const Motivation = () => {
     return (
 		<div className={styles.parent}>
 			<h1 className={styles.rpi}>
-				Powered by passion: Hosted on my personal Raspberry Pi
+				Powered by passion: Deployed backend on my personal Raspberry Pi
 			</h1>
 
 			<div>
