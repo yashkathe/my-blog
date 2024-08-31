@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import Header from "./Components/UI/Header";
 import SearchBar from "./Home/Components/SearchBar";
@@ -13,8 +13,8 @@ import SearchProvider from "./Context/SearchProvider";
 import styles from "./App.module.css";
 
 function App() {
+
 	return (
-		<Router>
 			<SearchProvider>
 				<Switch>
 					<Route path='/motivation' exact>
@@ -53,7 +53,6 @@ function App() {
 					</Route>
 				</Switch>
 			</SearchProvider>
-		</Router>
 	);
 }
 
