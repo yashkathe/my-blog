@@ -2,6 +2,7 @@ import React, {useContext} from "react";
 import { motion } from "framer-motion";
 
 import BackToHomeBtn from "../Components/Shared/BackToHomeBtn";
+import ConnectionStatus from "./ConnectionStatus";
 
 import mongo_logo from "/logos/mongo_db_logo.png";
 import express_logo from "/logos/express_logo.png"
@@ -12,6 +13,8 @@ import styles from "./Motivation.module.css";
 
 import variantsCtx from "../Context/Variants";
 
+import ft from '/stock/ft.jpeg'
+
 const Motivation = () => {
 	
     const variants = useContext(variantsCtx)
@@ -21,6 +24,8 @@ const Motivation = () => {
 			<h1 className={styles.rpi}>
 				Powered by passion: Deployed backend on my personal Raspberry Pi
 			</h1>
+
+            <ConnectionStatus/>
 
 			<div>
 				<h1>Motivation</h1>
@@ -33,6 +38,10 @@ const Motivation = () => {
                     <br/>
                     'The Feynman technique is all about explaining a concept in simple terms, as if you're teaching it to someone else, to really grasp the idea yourself'
 				</p>
+
+                <div className={styles.ft_photo}>
+                    <img src={ft} alt="Feynman Technique"/>
+                </div>
 			</div>
 
 			<div className={styles.tech_stack}>
